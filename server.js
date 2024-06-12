@@ -4,7 +4,7 @@ const { execFile } = require('child_process');
 const path = require('path');
 
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.use(bodyParser.json());
 
@@ -13,9 +13,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/run-notebook', (req, res) => {
-  const notebookPath = path.join(__dirname, 'chatbot.ipynb');
+  const userInput = req.body.userInput; // Get user input from the request body
+  const notebookPath = path.join(__dirname, 'mkl.ipynb');
 
-  execFile('python', ['execute_notebook.py', notebookPath], (error, stdout, stderr) => {
+  execFile('python', ['execute_notebook.py', notebookPath, userInput], (error, stdout, stderr) => {
     if (error) {
       res.status(500).send({ error: error.message });
       return;
