@@ -4,7 +4,7 @@ const { execFile } = require('child_process');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 app.use(bodyParser.json());
 
@@ -20,6 +20,10 @@ app.post('/run-notebook', (req, res) => {
     if (error) {
       res.status(500).send({ error: error.message });
       return;
+    }
+
+    if (stderr) {
+      console.error(`Stderr: ${stderr}`);
     }
 
     try {
