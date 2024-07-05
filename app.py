@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import your_chatbot_module  # Replace with your chatbot module
+import okan  # Replace with your chatbot module
 
 app = Flask(__name__)
 
