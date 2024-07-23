@@ -39,7 +39,7 @@ from keras.preprocessing.sequence import pad_sequences
 nltk.download('punkt')
 
 # Load your dataset from the file
-df = pd.read_csv('C:/Users/ALABI ABIGAIL/Downloads/mental/train.csv')  # Replace with your actual file path
+df = pd.read_csv('/home/koye/Documents/GitHub/mkl-bot-bend/train.csv')  # Replace with your actual file path
 
 # Tokenize function using NLTK word_tokenize
 def tokenize_text(text):
@@ -93,7 +93,7 @@ from keras.preprocessing.sequence import pad_sequences
 nltk.download('punkt')
 
 # Load your dataset from the file
-df = pd.read_csv('C:/Users/ALABI ABIGAIL/Downloads/mental/train.csv')  # Replace with your actual file path
+df = pd.read_csv('/home/koye/Documents/GitHub/mkl-bot-bend/train.csv')  # Replace with your actual file path
 
 # Tokenize function using NLTK word_tokenize
 def tokenize_text(text):
@@ -155,7 +155,7 @@ from sklearn.metrics import accuracy_score
 nltk.download('punkt')
 
 # Load and preprocess dataset
-df = pd.read_excel('C:\\Users\\ALABI ABIGAIL\\abigail documents\\NLP_project\\train.xlsx')
+df = pd.read_excel('/home/koye/Documents/GitHub/mkl-bot-bend/train.xlsx')
 df.dropna(inplace=True)  # Drop rows with missing values
 
 # Convert all entries in 'Context' and 'Response' columns to strings
